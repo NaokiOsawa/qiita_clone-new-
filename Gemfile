@@ -18,6 +18,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'rubocop-rails'
   gem "onkcop", require: false
+  gem 'rubocop-performance'
 end
 
 group :development do
