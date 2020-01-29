@@ -7,6 +7,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
+  validates :account, presence: true, uniqueness: true
+  validates :name, presence: true
 
   has_many :articles
   has_many :comments
